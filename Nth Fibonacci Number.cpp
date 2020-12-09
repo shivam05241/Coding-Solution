@@ -11,10 +11,7 @@ using namespace std;
 // matrix multiplication  ans=a*b
 vector<vector<ll>> matrix_mul(vector<vector<ll>>a,vector<vector<ll>>b,ll mod)
 {
-
-    
     vector<vector<ll>>ans(2,vector<ll>(2,0));
-    
     for(int i=0;i<2;i++)
     {
         for(int j=0;j<2;j++)
@@ -23,10 +20,9 @@ vector<vector<ll>> matrix_mul(vector<vector<ll>>a,vector<vector<ll>>b,ll mod)
             for(int k=0;k<2;k++)
             {
                 ans[i][j]+=a[i][k]*b[k][j];
+                ans[i][j]%=mod;
             }
-            ans[i][j]%=mod;
-            //cout<<a[i][j]<<" ";
-        }//cout<<"\n";
+        }
     }
     return ans;
 }
@@ -74,7 +70,7 @@ int main()
 {
 
     ll n;
-    cin>>n;                                     // enter number n
+    cin>>n;                             // enter number n
     cout<<nth_fab(n);
     
    return 0;
