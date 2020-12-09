@@ -1,7 +1,12 @@
 /*
                 finding nth fabonicci number modulo 1e9+7 in O(8*log(n)) 
                 ____shivam awsthi
-*/
+                
+                
+                dp series
+                {f[n],f[n-1]} = {{1,1},{1,0}}^(n-1) * {f[2],f[1]}
+                                
+ */
 
 #include <bits/stdc++.h>
 #define ll long long int 
